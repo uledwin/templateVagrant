@@ -19,7 +19,8 @@ Vagrant.configure("2") do |config|
   # Provisioning
 
     config.vm.provision "shell", path: "provision.sh"
+    #config.vm.provision "file", source: "../devops-rampup", destination "/home/vagrant/devops-rampup"
+    
     end
-
 
 
