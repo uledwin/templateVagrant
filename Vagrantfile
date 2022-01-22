@@ -31,6 +31,7 @@ Vagrant.configure("2") do |config|
     nodo1.vm.box_version = "1.0.282"
     nodo1.vm.hostname = NAME_NODO1
     nodo1.vm.network "forwarded_port", guest: 80, host: 8080 # the request by port 8080, redirect to 80 in vm
+    nodo1.vm.network "forwarded_port", guest: 3030, host: 3030 # the request by port 8080, redirect to 80 in vm
     nodo1.vm.network "public_network", ip:IP_NODO1   # DCHP ip by bridge
     # Provisioning
     nodo1.vm.provision "shell", path: "provision.sh"
